@@ -15,7 +15,6 @@ const Dashboard=() =>{
         <Navbar.Collapse id="basic-navbar-nav">
 
           <Nav >
-         
             <Nav.Link href='/todo'>Todo</Nav.Link>
             <Nav.Link href='/lorem'>Lorem</Nav.Link>
             
