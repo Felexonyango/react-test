@@ -16,11 +16,10 @@ const Login=()=> {
   const [password,setPassword]=useState("")
   const [isDisabled, setIsDisabled] = useState(true);
  
-  const validateEmail = (email) => {
-    const re =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  };
+  const validateEmail =(email) => {
+    const res =/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return res.test(String(email).toLowerCase());
+  }
 
 
   const handleSubmit =(e)=>{
@@ -38,11 +37,6 @@ const Login=()=> {
     
   }, [email,password,navigate]);
 
-
-
-
- 
-
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -52,29 +46,25 @@ const Login=()=> {
        type="email" 
        placeholder="Enter email"
       value={email}
-        onChange={(e)=>setEmail(e.target.value)}/>
+        onChange={(e)=>setEmail(e.target.value)}
+        required/>
     </Col>
       </Form.Group>
-  
-
       <Form.Group className="mb-3" controlId="formBasicPassword">
       <Form.Label>Password</Form.Label>
       <Col sm={7}>
     <Form.Control
      type='password'
      placeholder="password"
+     value={password}
     onChange={(e) => setPassword(e.target.value)}/>
     </Col>
     </Form.Group>
-      
-
-
     <Button 
     variant="primary" 
     type="submit"
-    disabled={isDisabled}
-
-    >
+    required
+    disabled={isDisabled}>
       Submit
     </Button>
        
