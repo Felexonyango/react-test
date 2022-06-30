@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Lorem.css';
+import './Lorem.css';
 
 const  Lorem=()=> {
   return (
