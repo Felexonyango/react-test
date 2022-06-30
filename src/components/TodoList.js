@@ -54,7 +54,6 @@ function TodoList({ onClick }) {
   return (
     <>
       <TodoForm onSubmit={addTodo} />
-      {/* I want to move this code below into a new component called Todo.js */}
       <Todos
         todos={todos}
         completeTodo={completeTodo}
