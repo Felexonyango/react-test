@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
+import { Link } from 'react-router-dom';
 
 const Dashboard=() =>{
   return (
@@ -15,8 +15,14 @@ const Dashboard=() =>{
         <Navbar.Collapse id="basic-navbar-nav">
 
           <Nav >
-            <Nav.Link href='/todo'>Todo</Nav.Link>
-            <Nav.Link href='/lorem'>Lorem</Nav.Link>
+            <Nav.Link>
+              <Link to='/todo'>Todo</Link>
+              </Nav.Link>
+            <Nav.Link >
+              <Link to="/lorem">
+                Lorem
+              </Link>
+              </Nav.Link>
             
            
           </Nav>
