@@ -16,10 +16,8 @@ const Login=()=> {
   const [password,setPassword]=useState("")
   const [isDisabled, setIsDisabled] = useState(true);
  
-  const validateEmail =(email) => {
-    const res =/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return res.test(String(email).toLowerCase());
-  }
+  const validateEmail = email => typeof email === "string" && email.includes("@");
+
 
 
   const handleSubmit =(e)=>{
